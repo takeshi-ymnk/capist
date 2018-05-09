@@ -1,0 +1,95 @@
+# Logfile created on 2018-05-09 14:37:07 +0900 by logger.rb/47272
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-05-09 14:37:07 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [9bd96ca7] Running /usr/bin/env mkdir -p /tmp as takeshi-ymnk@tks-ymnk.com
+ DEBUG [9bd96ca7] Command: /usr/bin/env mkdir -p /tmp
+  INFO [9bd96ca7] Finished in 0.415 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-my_capist-production-yamanaka.sh 0.0%
+  INFO Uploading /tmp/git-ssh-my_capist-production-yamanaka.sh 100.0%
+  INFO [999f9353] Running /usr/bin/env chmod 700 /tmp/git-ssh-my_capist-production-yamanaka.sh as takeshi-ymnk@tks-ymnk.com
+ DEBUG [999f9353] Command: /usr/bin/env chmod 700 /tmp/git-ssh-my_capist-production-yamanaka.sh
+  INFO [999f9353] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [cbafe346] Running /usr/bin/env git ls-remote git@github.com:takeshi-ymnk/capist.git HEAD as takeshi-ymnk@tks-ymnk.com
+ DEBUG [cbafe346] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-my_capist-production-yamanaka.sh" ; /usr/bin/env git ls-remote git@github.com:takeshi-ymnk/capist.git HEAD )
+ DEBUG [cbafe346] 	fatal: cannot exec '/tmp/git-ssh-my_capist-production-yamanaka.sh': Permission denied
+ DEBUG [cbafe346] 	fatal: unable to fork
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-05-09 14:39:12 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [de272c5b] Running /usr/bin/env mkdir -p /tmp as takeshi-ymnk@tks-ymnk.com
+ DEBUG [de272c5b] Command: /usr/bin/env mkdir -p /tmp
+  INFO [de272c5b] Finished in 0.290 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-my_capist-production-yamanaka.sh 0.0%
+  INFO Uploading /tmp/git-ssh-my_capist-production-yamanaka.sh 100.0%
+  INFO [94112adc] Running /usr/bin/env chmod 700 /tmp/git-ssh-my_capist-production-yamanaka.sh as takeshi-ymnk@tks-ymnk.com
+ DEBUG [94112adc] Command: /usr/bin/env chmod 700 /tmp/git-ssh-my_capist-production-yamanaka.sh
+  INFO [94112adc] Finished in 0.112 seconds with exit status 0 (successful).
+  INFO [ca1bd160] Running /usr/bin/env git ls-remote https://github.com/takeshi-ymnk/capist.git HEAD as takeshi-ymnk@tks-ymnk.com
+ DEBUG [ca1bd160] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-my_capist-production-yamanaka.sh" ; /usr/bin/env git ls-remote https://github.com/takeshi-ymnk/capist.git HEAD )
+ DEBUG [ca1bd160] 	360f4bd6954f4b97be32f74dfc9d8dc4de0bd70f	HEAD
+  INFO [ca1bd160] Finished in 0.735 seconds with exit status 0 (successful).
+  INFO [84d89d51] Running /usr/bin/env mkdir -p /home/takeshi-ymnk/www/shared /home/takeshi-ymnk/www/releases as takeshi-ymnk@tks-ymnk.com
+ DEBUG [84d89d51] Command: /usr/bin/env mkdir -p /home/takeshi-ymnk/www/shared /home/takeshi-ymnk/www/releases
+  INFO [84d89d51] Finished in 0.114 seconds with exit status 0 (successful).
+ DEBUG [04eba129] Running [ -f /home/takeshi-ymnk/www/current/REVISION ] as takeshi-ymnk@tks-ymnk.com
+ DEBUG [04eba129] Command: [ -f /home/takeshi-ymnk/www/current/REVISION ]
+ DEBUG [04eba129] Finished in 0.110 seconds with exit status 1 (failed).
+ DEBUG [31c487a3] Running [ -f /home/takeshi-ymnk/www/repo/HEAD ] as takeshi-ymnk@tks-ymnk.com
+ DEBUG [31c487a3] Command: [ -f /home/takeshi-ymnk/www/repo/HEAD ]
+ DEBUG [31c487a3] Finished in 0.111 seconds with exit status 1 (failed).
+ DEBUG [32a4ecf2] Running if test ! -d /home/takeshi-ymnk/www; then echo "Directory does not exist '/home/takeshi-ymnk/www'" 1>&2; false; fi as takeshi-ymnk@tks-ymnk.com
+ DEBUG [32a4ecf2] Command: if test ! -d /home/takeshi-ymnk/www; then echo "Directory does not exist '/home/takeshi-ymnk/www'" 1>&2; false; fi
+ DEBUG [32a4ecf2] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO [2a85f1ec] Running /usr/bin/env git clone --mirror https://github.com/takeshi-ymnk/capist.git /home/takeshi-ymnk/www/repo as takeshi-ymnk@tks-ymnk.com
+ DEBUG [2a85f1ec] Command: cd /home/takeshi-ymnk/www && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-my_capist-production-yamanaka.sh" ; /usr/bin/env git clone --mirror https://github.com/takeshi-ymnk/capist.git /home/takeshi-ymnk/www/repo )
+ DEBUG [2a85f1ec] 	Cloning into bare repository '/home/takeshi-ymnk/www/repo'...
+  INFO [2a85f1ec] Finished in 0.823 seconds with exit status 0 (successful).
+ DEBUG [b93d79a6] Running if test ! -d /home/takeshi-ymnk/www/repo; then echo "Directory does not exist '/home/takeshi-ymnk/www/repo'" 1>&2; false; fi as takeshi-ymnk@tks-ymnk.com
+ DEBUG [b93d79a6] Command: if test ! -d /home/takeshi-ymnk/www/repo; then echo "Directory does not exist '/home/takeshi-ymnk/www/repo'" 1>&2; false; fi
+ DEBUG [b93d79a6] Finished in 0.112 seconds with exit status 0 (successful).
+  INFO [c1cd1f51] Running /usr/bin/env git remote set-url origin https://github.com/takeshi-ymnk/capist.git as takeshi-ymnk@tks-ymnk.com
+ DEBUG [c1cd1f51] Command: cd /home/takeshi-ymnk/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-my_capist-production-yamanaka.sh" ; /usr/bin/env git remote set-url origin https://github.com/takeshi-ymnk/capist.git )
+  INFO [c1cd1f51] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [b13037c2] Running /usr/bin/env git remote update --prune as takeshi-ymnk@tks-ymnk.com
+ DEBUG [b13037c2] Command: cd /home/takeshi-ymnk/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-my_capist-production-yamanaka.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [b13037c2] 	Fetching origin
+  INFO [b13037c2] Finished in 0.664 seconds with exit status 0 (successful).
+ DEBUG [613dd706] Running if test ! -d /home/takeshi-ymnk/www/repo; then echo "Directory does not exist '/home/takeshi-ymnk/www/repo'" 1>&2; false; fi as takeshi-ymnk@tks-ymnk.com
+ DEBUG [613dd706] Command: if test ! -d /home/takeshi-ymnk/www/repo; then echo "Directory does not exist '/home/takeshi-ymnk/www/repo'" 1>&2; false; fi
+ DEBUG [613dd706] Finished in 0.111 seconds with exit status 0 (successful).
+  INFO [e4a50742] Running /usr/bin/env mkdir -p /home/takeshi-ymnk/www/releases/20180509053913 as takeshi-ymnk@tks-ymnk.com
+ DEBUG [e4a50742] Command: cd /home/takeshi-ymnk/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-my_capist-production-yamanaka.sh" ; /usr/bin/env mkdir -p /home/takeshi-ymnk/www/releases/20180509053913 )
+  INFO [e4a50742] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [3b67d211] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/takeshi-ymnk/www/releases/20180509053913 as takeshi-ymnk@tks-ymnk.com
+ DEBUG [3b67d211] Command: cd /home/takeshi-ymnk/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-my_capist-production-yamanaka.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/takeshi-ymnk/www/releases/20180509053913 )
+  INFO [3b67d211] Finished in 0.133 seconds with exit status 0 (successful).
+ DEBUG [95e04865] Running if test ! -d /home/takeshi-ymnk/www/repo; then echo "Directory does not exist '/home/takeshi-ymnk/www/repo'" 1>&2; false; fi as takeshi-ymnk@tks-ymnk.com
+ DEBUG [95e04865] Command: if test ! -d /home/takeshi-ymnk/www/repo; then echo "Directory does not exist '/home/takeshi-ymnk/www/repo'" 1>&2; false; fi
+ DEBUG [95e04865] Finished in 0.112 seconds with exit status 0 (successful).
+ DEBUG [c7fde3cc] Running /usr/bin/env git rev-list --max-count=1 master as takeshi-ymnk@tks-ymnk.com
+ DEBUG [c7fde3cc] Command: cd /home/takeshi-ymnk/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-my_capist-production-yamanaka.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [c7fde3cc] 	360f4bd6954f4b97be32f74dfc9d8dc4de0bd70f
+ DEBUG [c7fde3cc] Finished in 0.122 seconds with exit status 0 (successful).
+ DEBUG [2fb2dfee] Running if test ! -d /home/takeshi-ymnk/www/releases/20180509053913; then echo "Directory does not exist '/home/takeshi-ymnk/www/releases/20180509053913'" 1>&2; false; fi as takeshi-ymnk@tks-ymnk.com
+ DEBUG [2fb2dfee] Command: if test ! -d /home/takeshi-ymnk/www/releases/20180509053913; then echo "Directory does not exist '/home/takeshi-ymnk/www/releases/20180509053913'" 1>&2; false; fi
+ DEBUG [2fb2dfee] Finished in 0.111 seconds with exit status 0 (successful).
+  INFO [61d1e13a] Running /usr/bin/env echo "360f4bd6954f4b97be32f74dfc9d8dc4de0bd70f" > REVISION as takeshi-ymnk@tks-ymnk.com
+ DEBUG [61d1e13a] Command: cd /home/takeshi-ymnk/www/releases/20180509053913 && /usr/bin/env echo "360f4bd6954f4b97be32f74dfc9d8dc4de0bd70f" > REVISION
+  INFO [61d1e13a] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [7123fdeb] Running /usr/bin/env ln -s /home/takeshi-ymnk/www/releases/20180509053913 /home/takeshi-ymnk/www/releases/current as takeshi-ymnk@tks-ymnk.com
+ DEBUG [7123fdeb] Command: /usr/bin/env ln -s /home/takeshi-ymnk/www/releases/20180509053913 /home/takeshi-ymnk/www/releases/current
+  INFO [7123fdeb] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [63e34eed] Running /usr/bin/env mv /home/takeshi-ymnk/www/releases/current /home/takeshi-ymnk/www as takeshi-ymnk@tks-ymnk.com
+ DEBUG [63e34eed] Command: /usr/bin/env mv /home/takeshi-ymnk/www/releases/current /home/takeshi-ymnk/www
+  INFO [63e34eed] Finished in 0.113 seconds with exit status 0 (successful).
+ DEBUG [1702d88b] Running /usr/bin/env ls -x /home/takeshi-ymnk/www/releases as takeshi-ymnk@tks-ymnk.com
+ DEBUG [1702d88b] Command: /usr/bin/env ls -x /home/takeshi-ymnk/www/releases
+ DEBUG [1702d88b] 	20180509053913
+ DEBUG [1702d88b] Finished in 0.111 seconds with exit status 0 (successful).
+ DEBUG [d9ba4dcd] Running if test ! -d /home/takeshi-ymnk/www/releases; then echo "Directory does not exist '/home/takeshi-ymnk/www/releases'" 1>&2; false; fi as takeshi-ymnk@tks-ymnk.com
+ DEBUG [d9ba4dcd] Command: if test ! -d /home/takeshi-ymnk/www/releases; then echo "Directory does not exist '/home/takeshi-ymnk/www/releases'" 1>&2; false; fi
+ DEBUG [d9ba4dcd] Finished in 0.112 seconds with exit status 0 (successful).
+  INFO [266f3bd9] Running /usr/bin/env echo "Branch master (at 360f4bd6954f4b97be32f74dfc9d8dc4de0bd70f) deployed as release 20180509053913 by yamanaka" >> /home/takeshi-ymnk/www/revisions.log as takeshi-ymnk@tks-ymnk.com
+ DEBUG [266f3bd9] Command: cd /home/takeshi-ymnk/www/releases && /usr/bin/env echo "Branch master (at 360f4bd6954f4b97be32f74dfc9d8dc4de0bd70f) deployed as release 20180509053913 by yamanaka" >> /home/takeshi-ymnk/www/revisions.log
+  INFO [266f3bd9] Finished in 0.114 seconds with exit status 0 (successful).
