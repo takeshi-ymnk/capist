@@ -2,8 +2,9 @@
 lock "~> 3.10.2"
 
 set :application, "my_capist"
-set :repo_url, "https://github.com/takeshi-ymnk/capist.git"
+set :repo_url, "git@github.com:takeshi-ymnk/capist.git"
 set :deploy_to, "/home/takeshi-ymnk/www"
+set :tmp_dir, "/home/takeshi-ymnk/tmp"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
